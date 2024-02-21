@@ -28,7 +28,7 @@ def keystoreProperties = new Properties()
     }
 
 android {
-    namespace "com.akashmore.barcodescanner"
+    namespace "com.example.barcodescanner"
     compileSdkVersion flutter.compileSdkVersion
     ndkVersion flutter.ndkVersion
 
@@ -67,6 +67,8 @@ android {
     buildTypes {
         release {
             signingConfig signingConfigs.release
+            shrinkResources false
+            minifyEnabled false
         }
     }
 }
@@ -75,4 +77,5 @@ flutter {
     source '../..'
 }
 
-dependencies {}
+dependencies {
+}
